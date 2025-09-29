@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 
-import '../../exchange_rates/domain/entities/conversion_rate.dart';
+import '../../../exchange_rates/domain/entities/conversion_rate.dart';
 
 class CalculationHistory extends Equatable {
   final double inputAmount;
