@@ -1,0 +1,192 @@
+{
+    "data": {
+        "getCountryConversions": {
+            "_id": "68d719ba14b48a6e2bfbc4c1",
+            "baseCurrency": {
+                "code": "VEF",
+                "decimalDigits": 2,
+                "name": "Venezuelan Bolívar",
+                "rounding": 0,
+                "symbol": "Bs",
+                "symbolNative": "Bs",
+                "__typename": "Currency"
+            },
+            "country": {
+                "code": "VE",
+                "dial_code": "+58",
+                "flag": "🇻🇪",
+                "name": "Venezuela",
+                "__typename": "Country"
+            },
+            "conversionRates": [
+                {
+                    "baseValue": 0.01,
+                    "official": false,
+                    "principal": true,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "USD",
+                        "decimalDigits": 2,
+                        "name": "US Dollar",
+                        "rounding": 0,
+                        "symbol": "$",
+                        "symbolNative": "$",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "PRIMARY",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 173.74,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "USD",
+                        "decimalDigits": 2,
+                        "name": "US Dollar",
+                        "rounding": 0,
+                        "symbol": "$",
+                        "symbolNative": "$",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "SECONDARY",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 175.65,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "USD",
+                        "decimalDigits": 2,
+                        "name": "US Dollar",
+                        "rounding": 0,
+                        "symbol": "$",
+                        "symbolNative": "$",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 205.39,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "EUR",
+                        "decimalDigits": 2,
+                        "name": "Euro",
+                        "rounding": 0,
+                        "symbol": "€",
+                        "symbolNative": "€",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 24.63,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "CNY",
+                        "decimalDigits": 2,
+                        "name": "Chinese Yuan",
+                        "rounding": 0,
+                        "symbol": "CN¥",
+                        "symbolNative": "CN¥",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 4.23,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "TRY",
+                        "decimalDigits": 2,
+                        "name": "Turkish Lira",
+                        "rounding": 0,
+                        "symbol": "TL₺",
+                        "symbolNative": "TL₺",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 2.1,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": false,
+                    "rateCurrency": {
+                        "code": "RUB",
+                        "decimalDigits": 2,
+                        "name": "Russian Ruble",
+                        "rounding": 0,
+                        "symbol": "RUB",
+                        "symbolNative": "₽.",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 0,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": true,
+                    "rateCurrency": {
+                        "code": "COP",
+                        "decimalDigits": 0,
+                        "name": "Colombian Peso",
+                        "rounding": 0,
+                        "symbol": "CO$",
+                        "symbolNative": "$",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 22.25,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                },
+                {
+                    "baseValue": 0,
+                    "official": true,
+                    "principal": false,
+                    "usesRateValue": true,
+                    "rateCurrency": {
+                        "code": "BRL",
+                        "decimalDigits": 2,
+                        "name": "Brazilian Real",
+                        "rounding": 0,
+                        "symbol": "R$",
+                        "symbolNative": "R$",
+                        "__typename": "Currency"
+                    },
+                    "rateValue": 0.03,
+                    "type": "OTHER",
+                    "__typename": "ConversionRate"
+                }
+            ],
+            "dateBcvFees": 1759168440000,
+            "dateParalelo": 1748632537765,
+            "dateBcv": 1758860940000,
+            "createdAt": 1758927290297,
+            "__typename": "Conversion"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'country_conversion_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CountryConversionModel _$CountryConversionModelFromJson(
+  Map<String, dynamic> json,
+) => CountryConversionModel(
+  baseCurrency: CurrencyModel.fromJson(
+    json['baseCurrency'] as Map<String, dynamic>,
+  ),
+  country: CountryModel.fromJson(json['country'] as Map<String, dynamic>),
+  conversionRates: (json['conversionRates'] as List<dynamic>)
+      .map((e) => ConversionRateModel.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  dateBcv: (json['dateBcv'] as num).toInt(),
+);
+
+Map<String, dynamic> _$CountryConversionModelToJson(
+  CountryConversionModel instance,
+) => <String, dynamic>{
+  'baseCurrency': instance.baseCurrency,
+  'country': instance.country,
+  'conversionRates': instance.conversionRates,
+  'dateBcv': instance.dateBcv,
+};
