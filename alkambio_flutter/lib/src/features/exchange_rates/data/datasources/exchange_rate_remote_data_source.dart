@@ -68,10 +68,17 @@ class ExchangeRateRemoteDataSourceImpl implements ExchangeRateRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      final jsonResponse = json.decode(response.body);
-      final data = jsonResponse['data']['getCountryConversions'];
-      return CountryConversionModel.fromJson(data);
+      print(response.body);
+      try {
+        final jsonResponse = json.decode(response.body);
+        final data = jsonResponse['data']['getCountryConversions'];
+        return CountryConversionModel.fromJson(data);
+      } catch (e) {
+        print(e);
+        throw Exception('Failed to parse conversion rates');
+      }
     } else {
+      print('Failed to load conversion rates: ${response.statusCode}');
       throw Exception('Failed to load conversion rates');
     }
   }
