@@ -14,6 +14,8 @@ import 'package:http/http.dart' as _i519;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+import '../../core/log_service.dart' as _i1065;
+
 import 'features/calculator/presentation/bloc/calculator_bloc.dart' as _i480;
 import 'features/exchange_rates/data/datasources/exchange_rate_remote_data_source.dart'
     as _i176;
@@ -41,6 +43,7 @@ Future<_i174.GetIt> $initGetIt(
     preResolve: true,
   );
   gh.lazySingleton<_i519.Client>(() => registerModule.client);
+  gh.lazySingleton<_i1065.LogService>(() => registerModule.logService);
   gh.lazySingleton<_i176.ExchangeRateRemoteDataSource>(
     () => _i176.ExchangeRateRemoteDataSourceImpl(client: gh<_i519.Client>()),
   );
@@ -51,7 +54,9 @@ Future<_i174.GetIt> $initGetIt(
       remoteDataSource: gh<_i176.ExchangeRateRemoteDataSource>(),
     ),
   );
-  gh.factory<_i480.CalculatorBloc>(() => _i480.CalculatorBloc());
+  gh.factory<_i480.CalculatorBloc>(
+    () => _i480.CalculatorBloc(logService: gh<_i1065.LogService>()),
+  );
   gh.lazySingleton<_i276.GetCountryConversions>(
     () => _i276.GetCountryConversions(gh<_i879.ExchangeRateRepository>()),
   );

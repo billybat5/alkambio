@@ -22,4 +22,7 @@ abstract class RegisterModule {
 
   @preResolve // For async dependencies
   Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
+
+  @lazySingleton
+  LogService get logService => LogService();
 }

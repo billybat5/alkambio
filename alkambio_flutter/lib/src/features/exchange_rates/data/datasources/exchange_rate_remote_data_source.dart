@@ -4,6 +4,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 
+import '../../../../core/log_service.dart';
+import '../../../../injection_container.dart';
+
 import '../models/country_conversion_model.dart';
 
 abstract class ExchangeRateRemoteDataSource {
@@ -13,6 +16,7 @@ abstract class ExchangeRateRemoteDataSource {
 @LazySingleton(as: ExchangeRateRemoteDataSource)
 class ExchangeRateRemoteDataSourceImpl implements ExchangeRateRemoteDataSource {
   final http.Client client;
+  final LogService logService = sl<LogService>();
 
   ExchangeRateRemoteDataSourceImpl({required this.client});
 
@@ -69,17 +73,17 @@ class ExchangeRateRemoteDataSourceImpl implements ExchangeRateRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      print(response.body);
+      logService.log('API Response: ${response.body}');
       try {
         final jsonResponse = json.decode(response.body);
         final data = jsonResponse['data']['getCountryConversions'];
         return CountryConversionModel.fromJson(data);
       } catch (e) {
-        print(e);
+        logService.log('Error parsing JSON: $e');
         throw Exception('Failed to parse conversion rates');
       }
     } else {
-      print('Failed to load conversion rates: ${response.statusCode}');
+      logService.log('API Error: ${response.statusCode}');
       throw Exception('Failed to load conversion rates');
     }
   }

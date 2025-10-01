@@ -9,6 +9,8 @@ import '../../../calculator/presentation/bloc/calculator_bloc.dart';
 import '../bloc/exchange_rate_bloc.dart';
 import '../widgets/rate_list_item.dart';
 
+import '../../../logs/presentation/pages/log_screen.dart';
+
 class ExchangeRatePage extends StatelessWidget {
   const ExchangeRatePage({super.key});
 
@@ -18,6 +20,15 @@ class ExchangeRatePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('AlKambio'),
         actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.bug_report),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LogScreen()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.info_outline),
             onPressed: () {
