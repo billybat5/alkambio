@@ -52,4 +52,4 @@ build/
 
 # Windows
 /windows/build/
-/windows/flutter/ephemeral/
+/windows/flutter/ephemeral/.dart_tool/

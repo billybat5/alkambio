@@ -25,10 +25,7 @@ import 'features/exchange_rates/domain/usecases/get_country_conversions.dart'
     as _i276;
 import 'features/exchange_rates/presentation/bloc/exchange_rate_bloc.dart'
     as _i688;
-import 'features/history/data/repositories/history_repository_impl.dart'
-    as _i1064;
-import 'features/history/domain/repositories/history_repository.dart' as _i190;
-import 'features/history/presentation/bloc/history_bloc.dart' as _i618;
+
 import 'injection_container.dart' as _i809;
 
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -47,23 +44,14 @@ Future<_i174.GetIt> $initGetIt(
   gh.lazySingleton<_i176.ExchangeRateRemoteDataSource>(
     () => _i176.ExchangeRateRemoteDataSourceImpl(client: gh<_i519.Client>()),
   );
-  gh.factory<_i618.HistoryBloc>(
-    () => _i618.HistoryBloc(historyRepository: gh<InvalidType>()),
-  );
-  gh.lazySingleton<_i190.HistoryRepository>(
-    () => _i1064.HistoryRepositoryImpl(
-      sharedPreferences: gh<_i460.SharedPreferences>(),
-    ),
-  );
+  
+  
   gh.lazySingleton<_i879.ExchangeRateRepository>(
     () => _i778.ExchangeRateRepositoryImpl(
       remoteDataSource: gh<_i176.ExchangeRateRemoteDataSource>(),
     ),
   );
-  gh.factory<_i480.CalculatorBloc>(
-    () =>
-        _i480.CalculatorBloc(historyRepository: gh<_i190.HistoryRepository>()),
-  );
+  gh.factory<_i480.CalculatorBloc>(() => _i480.CalculatorBloc());
   gh.lazySingleton<_i276.GetCountryConversions>(
     () => _i276.GetCountryConversions(gh<_i879.ExchangeRateRepository>()),
   );

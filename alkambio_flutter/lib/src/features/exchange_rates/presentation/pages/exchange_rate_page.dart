@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../injection_container.dart';
 import '../../../about/presentation/pages/about_page.dart';
 import '../../../calculator/presentation/bloc/calculator_bloc.dart';
-import '../../../history/presentation/pages/history_page.dart';
+
 import '../bloc/exchange_rate_bloc.dart';
 import '../widgets/rate_list_item.dart';
 
@@ -18,15 +18,6 @@ class ExchangeRatePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('AlKambio'),
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.history),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const HistoryPage()),
-              );
-            },
-          ),
           IconButton(
             icon: const Icon(Icons.info_outline),
             onPressed: () {
