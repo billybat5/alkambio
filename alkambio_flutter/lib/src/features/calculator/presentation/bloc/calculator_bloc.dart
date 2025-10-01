@@ -12,6 +12,7 @@ part 'calculator_state.dart';
 class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   CalculatorBloc() : super(CalculatorInitial()) {
     on<AmountChanged>((event, emit) async {
+      print('AmountChanged event received: ${event.amount}');
       final amount = double.tryParse(event.amount) ?? 0.0;
       final newValues = <String, double>{};
 
@@ -21,6 +22,7 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
         }
       }
 
+      print('New values calculated: $newValues');
       emit(CalculatorResult(newValues));
     });
   }
