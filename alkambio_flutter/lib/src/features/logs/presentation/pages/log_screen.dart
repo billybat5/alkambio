@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/log_service.dart';
-import '../../injection_container.dart';
+import '../../../core/log_service.dart';
+import '../../../injection_container.dart';
 
 class LogScreen extends StatefulWidget {
   const LogScreen({super.key});
@@ -32,7 +32,7 @@ class _LogScreenState extends State<LogScreen> {
       body: ListView.builder(
         itemCount: _logService.logs.length,
         itemBuilder: (context, index) {
-          final log = _log_service.logs[index];
+          final log = _logService.logs[index];
           return ListTile(
             title: Text(log.message),
             subtitle: Text(log.timestamp.toIso8601String()),

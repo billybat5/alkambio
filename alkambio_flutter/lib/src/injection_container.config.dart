@@ -14,7 +14,7 @@ import 'package:http/http.dart' as _i519;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
-import '../../core/log_service.dart' as _i1065;
+import '../core/log_service.dart' as _i1065;
 
 import 'features/calculator/presentation/bloc/calculator_bloc.dart' as _i480;
 import 'features/exchange_rates/data/datasources/exchange_rate_remote_data_source.dart'

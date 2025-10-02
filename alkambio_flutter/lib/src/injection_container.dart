@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/log_service.dart';
+
 import 'injection_container.config.dart';
 
 final sl = GetIt.instance;
